@@ -57,7 +57,7 @@
   <body>
     <main>
       <h1>Candy Clicker Privacy Policy</h1>
-      <p class="meta"><strong>Last updated:</strong> <time datetime="2026-10-06">06.10.2026</time></p>
+      <p class="meta"><strong>Last updated:</strong> <time datetime="2026-11-11">11.11.2026</time></p>
 
       <p>
         This Privacy Policy outlines the data practices of the <strong>Candy Clicker</strong>
@@ -68,19 +68,45 @@
 
       <h2>1. Information We Collect and Process</h2>
       <p>
-        The Application does not require account creation and does not directly request or collect
-        names, email addresses, phone numbers, precise location, photos, contacts, or payment information.
+        The Application does not require account registration or login, and does not directly request or collect
+        real names, email addresses, phone numbers, precise location, photos, contacts, or payment information.
       </p>
       <p>
-        Game progress, language preferences, audio, and visual settings are stored locally on your device.
-        This data is processed solely to maintain your gameplay experience and is never transmitted
-        to the developer's servers.
+        Core game progress, language preferences, audio, and visual settings are stored locally on your device.
+        However, to provide online features such as the global leaderboard and application update checks, the
+        Application transmits limited data to our backend database powered by <strong>Supabase</strong>:
       </p>
+      <ul>
+        <li>
+          <strong>Leaderboard &amp; Profile Data:</strong> A randomly generated, anonymous player identifier
+          (<code>player_id</code>) created locally on your device, along with your chosen display nickname,
+          selected in-game avatar ID, lifetime candy score, and prestige count. Please do not include real names
+          or sensitive personal information in your nickname, as leaderboard entries are publicly visible to
+          other players.
+        </li>
+        <li>
+          <strong>Moderation Reports:</strong> If you report an inappropriate nickname on the leaderboard, the
+          randomly generated player IDs of both the reporting player and the reported entry are transmitted to
+          prevent abuse and enforce community standards.
+        </li>
+        <li>
+          <strong>App Update Checks:</strong> Basic platform information (such as operating system type) is used
+          to query our server for available or required application updates.
+        </li>
+      </ul>
 
-      <h2>2. Advertisements and Third Parties</h2>
+      <h2>2. Advertisements and Third-Party Services</h2>
       <p>
-        The Application utilizes the Google Mobile Ads SDK / Google AdMob to display banner ads,
-        interstitial ads (e.g., post-prestige), and optional rewarded ads that players can choose
+        <strong>Cloud Infrastructure (Supabase):</strong> We use Supabase as our backend service provider to host
+        the global leaderboard, process nickname moderation reports, and serve application update configurations.
+        When the Application communicates with Supabase, standard network metadata (such as your IP address) is
+        processed automatically as part of encrypted HTTPS transmissions for routing and security purposes. You
+        can review the <a href="https://supabase.com/privacy" rel="noopener noreferrer">Supabase Privacy Policy</a>
+        for details on their infrastructure security and data handling.
+      </p>
+      <p>
+        <strong>Advertising (Google AdMob):</strong> The Application utilizes the Google Mobile Ads SDK / Google AdMob
+        to display banner ads, interstitial ads (e.g., post-prestige), and optional rewarded ads that players can choose
         to watch to double their offline earnings. Google and its advertising technology partners
         may automatically collect or share the following data categories for ad serving, measurement,
         analytics, and fraud prevention:
@@ -95,7 +121,7 @@
         For more information on how the ad provider uses data, you can review the
         <a href="https://policies.google.com/privacy" rel="noopener noreferrer">Google Privacy Policy</a>
         and <a href="https://policies.google.com/technologies/partner-sites" rel="noopener noreferrer">How Google uses information from sites or apps that use our services</a>.
-        Data transfers to Google are encrypted in transit where applicable.
+        Data transfers to Google and Supabase are encrypted in transit via HTTPS.
       </p>
 
       <h2>3. Personalized Ads and Consent</h2>
@@ -112,17 +138,26 @@
       <p>Data may be processed for the following purposes:</p>
       <ul>
         <li>storing game progress and preferences locally on the device,</li>
+        <li>operating the public global leaderboard, displaying player rankings, and moderating reported nicknames,</li>
+        <li>checking for and notifying players of application updates,</li>
         <li>serving ads, measuring ad performance, and preventing ad fraud,</li>
-        <li>detecting bugs, performance issues, and security vulnerabilities within the app and ad SDKs,</li>
+        <li>detecting bugs, performance issues, and security vulnerabilities within the app and third-party SDKs,</li>
         <li>complying with legal obligations and protecting rights.</li>
       </ul>
 
       <h2>5. Data Retention and Sharing</h2>
       <p>
         Locally stored game data remains on your device until you uninstall the app or clear app
-        storage via device settings. The retention and processing of ad-related data are governed
-        by Google’s own privacy policies. Data may be shared with Google and authorized service
-        providers to deliver ad services, meet regulatory requirements, or maintain security.
+        storage via device settings (which also resets your locally stored random player ID).
+        Leaderboard records (anonymous player ID, nickname, avatar ID, lifetime candy, and prestige count)
+        are retained in our database to maintain the global rankings and are publicly visible to other
+        players within the Application. You may request the deletion of your leaderboard entry at any
+        time by contacting us at the email address below.
+      </p>
+      <p>
+        The retention and processing of ad-related data are governed by Google’s own privacy policies.
+        Data may be shared with Google, Supabase, and authorized service providers solely to deliver
+        app functionality, ad services, meet regulatory requirements, or maintain security.
         These third parties are governed by their respective privacy policies.
       </p>
 
